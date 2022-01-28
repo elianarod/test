@@ -1,0 +1,461 @@
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* importar fontes */
+@font-face {
+  font-family: "NotoSerifJP-Light";
+  src: url("/fonts/NotoSerifJP-Light.otf");
+}
+
+@font-face {
+  font-family: "Hack-Regular";
+  src: url("/fonts/Hack-Regular.ttf");
+}
+
+/* cor global */
+:root {
+  --cor: red;
+}
+
+/* geral */
+html {
+  cursor: none;
+  user-select: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+}
+
+em{
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  cursor: none;
+  color: var(--cor);
+}
+
+a:hover {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+a:active {
+  text-decoration: underline;
+}
+
+header {
+  border-bottom: 1px var(--cor) solid;
+}
+
+/* nav */
+nav {
+  display: flex;
+  /* width: 100vw; */
+  justify-content: space-between;
+  padding: 0.7em 1.5em 0.7em 1.5em;
+  border-bottom: 1px var(--cor) solid;
+  font-family: 'Hack-Regular', monospace;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+/* texto de apresentação */
+.about {
+  display: flex;
+  font-family: 'Hack-Regular', monospace;
+  font-size: 22px;
+  line-height: 27px;
+  padding: 1.5em 24px 1.5em 24px;
+  color: var(--cor);
+}
+
+/* seta */
+.arrow {
+  display: none;
+}
+
+/* work */
+article {
+  border-bottom: 1px var(--cor) solid;
+  color: var(--cor);
+  font-family: "NotoSerifJP-Light", Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
+  padding: 1em 2em 1em 2em;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details.active {
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.details h2,
+p {
+  flex: 1;
+}
+
+.details h2 {
+  flex-grow: 1.8;
+}
+
+.details p {
+  margin-left: 0.5em;
+}
+
+#collab {
+  margin-top: 0.7em;
+  font-style: italic;
+}
+
+#year {
+  text-align: right;
+  flex-grow: 0.5;
+}
+
+.dropdown {
+  display: none;
+  height: 60vh;
+  overflow: scroll;
+  margin-top: 0.5em;
+  line-height: 1.2em;
+}
+
+/* #preview {
+  display: none;
+} */
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  margin-top: 0.7em;
+
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+}
+
+#work i {
+  display: none;
+}
+
+#scroll {
+  display: none;
+}
+
+/* contacts */
+footer {
+  font-family:'Hack-Regular', monospace;
+  color: var(--cor);
+  display: flex;
+  flex-direction: column;
+  padding: 0.7em 2em 0.7em 2em;
+}
+
+footer p {
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+#rights {
+  position: relative;
+  top: 5em;
+  margin-top: 1em;
+  font-size: 9px;
+}
+
+#behance,
+#insta {
+  position: relative;
+  top: -1.2em;
+}
+
+footer i {
+  font-size: 20px;
+  transform: rotate(45deg);
+  position: relative;
+  display: inline-block;
+  top: 0.2em;
+  margin-top: -0.2em;
+}
+
+/* MEDIA QUERIES */
+/* desktop */
+@media only screen and (min-width: 768px) {
+  /* nav */
+  nav {
+    font-size: 22px;
+  }
+
+  /* texto de apresentação */
+  header {
+    height: 100vh;
+  }
+
+  .about {
+    font-size: 3.2vw;
+    line-height: 4vw;
+    padding: 3em 10% 12% 24px;
+    color: white;
+  }
+
+  /* seta */
+  .arrow {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    padding-bottom: 1em;
+  }
+
+  .arrow i {
+    font-size: 35px;
+  }
+
+  /* interação hover cursor c/texto apresentação */
+  .cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.6rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    background-color: var(--cor);
+    mix-blend-mode: difference;
+    z-index: 99;
+  }
+
+  /* .hover {
+    transition: all 0.3s ease;
+  } */
+
+  /* .hover-about:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(40);
+  } */
+
+  /* work */
+  article {
+    font-size: 20px;
+    padding: 1em 2em 1em 2em;
+  }
+
+  .details h2 {
+    margin-bottom: 0;
+  }
+
+  article.active {
+    width: 40vw;
+    border-right: 1px var(--cor) solid;
+  }
+
+  .details {
+    width: 40vw;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 101.5vh;
+    width: 40vw;
+    right: 2em;
+    /* height: calc(650px + 122px - 0.5em); */
+    overflow-x: hidden;
+    font-size: 18px;
+    line-height: 1.3em;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .dropdown::-webkit-scrollbar {
+    display: none;
+  }
+
+  #work i {
+    display: block;
+    position: fixed;
+    font-size: 40px;
+    bottom: 0.2em;
+  }
+
+  #project {
+    padding: 0 0 0 2.5em;
+  }
+
+  #scroll {
+    font-family: "Share Tech Mono", Arial, Helvetica, sans-serif;
+    transform: rotate(-90deg);
+    display: block;
+    position: fixed;
+    bottom: 3.4em;
+    font-size: 16px;
+    padding-bottom: 3em;
+  }
+
+  /* contacts */
+  footer {
+    flex-direction: row;
+    width: 40vw;
+    padding: 1.5em 3em 1.5em 2em;
+  }
+
+  footer.active {
+    border-right: 1px var(--cor) solid;
+  }
+
+  footer div {
+    flex: 1;
+  }
+
+  footer p {
+    font-size: 20px;
+  }
+
+  #rights {
+    font-size: 12px;
+    top: 0;
+  }
+
+  #behance,
+  #insta {
+    top: 0;
+  }
+
+  .col-1 {
+    flex-grow: 1.2;
+    padding-left: 0.5em;
+  }
+
+  .col-2 {
+    flex-direction: column;
+    margin-left: 0.5em;
+  }
+}
