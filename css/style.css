@@ -126,13 +126,8 @@ table {
 
 /* importar fontes */
 @font-face {
-  font-family: "NotoSerifJP-Light";
-  src: url("/fonts/NotoSerifJP-Light.otf");
-}
-
-@font-face {
   font-family: "Hack-Regular";
-  src: url("/fonts/Hack-Regular.ttf");
+  src: url("../fonts/Hack-Regular.ttf");
 }
 
 /* cor global */
@@ -204,7 +199,7 @@ nav {
 article {
   border-bottom: 1px var(--cor) solid;
   color: var(--cor);
-  font-family: "NotoSerifJP-Light", Georgia, "Times New Roman", Times, serif;
+  font-family: "Noto Serif JP", Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   padding: 1em 2em 1em 2em;
 }
@@ -249,10 +244,6 @@ p {
   margin-top: 0.5em;
   line-height: 1.2em;
 }
-
-/* #preview {
-  display: none;
-} */
 
 img {
   max-width: 100%;
@@ -325,7 +316,7 @@ footer i {
 
   .about {
     font-size: 3.2vw;
-    line-height: 4vw;
+    line-height: 3.8vw;
     padding: 3em 10% 12% 24px;
     color: white;
   }
@@ -353,14 +344,6 @@ footer i {
     mix-blend-mode: difference;
     z-index: 99;
   }
-
-  /* .hover {
-    transition: all 0.3s ease;
-  } */
-
-  /* .hover-about:hover ~ .cursor {
-    transform: translate(-50%, -50%) scale(40);
-  } */
 
   /* work */
   article {
@@ -411,13 +394,13 @@ footer i {
   }
 
   #scroll {
-    font-family: "Share Tech Mono", Arial, Helvetica, sans-serif;
+    font-family: "Hack-Regular", Arial, Helvetica, sans-serif;
     transform: rotate(-90deg);
     display: block;
     position: fixed;
-    bottom: 3.4em;
-    font-size: 16px;
-    padding-bottom: 3em;
+    bottom: 3.9em;
+    font-size: 14px;
+    padding-bottom: 3.9em;
   }
 
   /* contacts */
@@ -450,7 +433,7 @@ footer i {
   }
 
   .col-1 {
-    flex-grow: 1.2;
+    flex-grow: 1.18;
     padding-left: 0.5em;
   }
 

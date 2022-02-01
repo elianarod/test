@@ -120,7 +120,7 @@ if ($(window).width() > 767) {
 
 // Random color on page load
 // array with colors
-let colors = ["#205CC2", "#2D9C54", "#E67B1C", "#D1191A"];
+let colors = ["#205CC2", "#038F36", "#E6750F", "#D1191A"];
 
 // get random color from array
 function getColor() {
@@ -139,6 +139,8 @@ $('.dropdown').css('height', `${altura + 25}`);
 }
 
 // hide scroll msg on scroll up 
+if ($(window).width() > 767) {
+
 let targetOffset = $(".about").offset().top;
 
 let $w = $(window).scroll(function(){
@@ -148,3 +150,4 @@ let $w = $(window).scroll(function(){
       $('#work i, #scroll').css('display', 'block');    
     }
 });
+}
